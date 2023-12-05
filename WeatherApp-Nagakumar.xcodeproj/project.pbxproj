@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		DBDB7D0D2B1F969200B0CA42 /* WeatherApp_NagakumarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDB7D0C2B1F969200B0CA42 /* WeatherApp_NagakumarApp.swift */; };
-		DBDB7D0F2B1F969200B0CA42 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDB7D0E2B1F969200B0CA42 /* ContentView.swift */; };
 		DBDB7D112B1F969300B0CA42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBDB7D102B1F969300B0CA42 /* Assets.xcassets */; };
 		DBDB7D142B1F969300B0CA42 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBDB7D132B1F969300B0CA42 /* Preview Assets.xcassets */; };
+		DBDB7D1B2B1F96D400B0CA42 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDB7D1A2B1F96D400B0CA42 /* ContentView.swift */; };
+		DBDB7D1D2B1F96E000B0CA42 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDB7D1C2B1F96E000B0CA42 /* LoadingView.swift */; };
+		DBDB7D212B1F970E00B0CA42 /* CLLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDB7D202B1F970E00B0CA42 /* CLLocationManager.swift */; };
+		DBDB7D232B1F971400B0CA42 /* ServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDB7D222B1F971400B0CA42 /* ServiceLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DBDB7D092B1F969200B0CA42 /* WeatherApp-Nagakumar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WeatherApp-Nagakumar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBDB7D0C2B1F969200B0CA42 /* WeatherApp_NagakumarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherApp_NagakumarApp.swift; sourceTree = "<group>"; };
-		DBDB7D0E2B1F969200B0CA42 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DBDB7D102B1F969300B0CA42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBDB7D132B1F969300B0CA42 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DBDB7D1A2B1F96D400B0CA42 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DBDB7D1C2B1F96E000B0CA42 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		DBDB7D202B1F970E00B0CA42 /* CLLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLLocationManager.swift; sourceTree = "<group>"; };
+		DBDB7D222B1F971400B0CA42 /* ServiceLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +57,8 @@
 		DBDB7D0B2B1F969200B0CA42 /* WeatherApp-Nagakumar */ = {
 			isa = PBXGroup;
 			children = (
-				DBDB7D0C2B1F969200B0CA42 /* WeatherApp_NagakumarApp.swift */,
-				DBDB7D0E2B1F969200B0CA42 /* ContentView.swift */,
+				DBDB7D1F2B1F96FB00B0CA42 /* Managers */,
+				DBDB7D1E2B1F96EC00B0CA42 /* Views */,
 				DBDB7D102B1F969300B0CA42 /* Assets.xcassets */,
 				DBDB7D122B1F969300B0CA42 /* Preview Content */,
 			);
@@ -65,6 +71,25 @@
 				DBDB7D132B1F969300B0CA42 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DBDB7D1E2B1F96EC00B0CA42 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DBDB7D1A2B1F96D400B0CA42 /* ContentView.swift */,
+				DBDB7D1C2B1F96E000B0CA42 /* LoadingView.swift */,
+				DBDB7D0C2B1F969200B0CA42 /* WeatherApp_NagakumarApp.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DBDB7D1F2B1F96FB00B0CA42 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				DBDB7D222B1F971400B0CA42 /* ServiceLayer.swift */,
+				DBDB7D202B1F970E00B0CA42 /* CLLocationManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +162,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBDB7D0F2B1F969200B0CA42 /* ContentView.swift in Sources */,
+				DBDB7D232B1F971400B0CA42 /* ServiceLayer.swift in Sources */,
+				DBDB7D1B2B1F96D400B0CA42 /* ContentView.swift in Sources */,
+				DBDB7D212B1F970E00B0CA42 /* CLLocationManager.swift in Sources */,
 				DBDB7D0D2B1F969200B0CA42 /* WeatherApp_NagakumarApp.swift in Sources */,
+				DBDB7D1D2B1F96E000B0CA42 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
