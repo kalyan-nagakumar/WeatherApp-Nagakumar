@@ -7,29 +7,34 @@
 
 import Foundation
 protocol ServiceProtocl {
-    func fetchData<T:Codable>(url:String,resultModel:T) async throws
+    
+    func fetchData<T:Codable>(url:String,model:T.Type) async throws -> T
 }
 
-class ServiceLayer : ServiceProtocl {
+final class ServiceLayerImpl : ServiceProtocl {
     
     
-    
-    func fetchData<T>(url: String, resultModel: T) async throws where T : Decodable, T : Encodable {
+    func fetchData<T>(url: String, model: T.Type) async throws -> T where T : Decodable, T : Encodable {
         
-        guard let unwrappedURL = URL(string: url) else {return}
+        guard let unwrappedURL = URL(string: url) else {
+           throw NetworkErros.badUrl
+        }
         
         let(data,response) =  try await URLSession.shared.data(from: unwrappedURL)
         
-        guard (response as? HTTPURLResponse)?.statusCode == 200 else {return}
+        guard (response as? HTTPURLResponse)?.statusCode == 200 else {
+            throw NetworkErros.badResponse
+        }
         
-        guard let responseData = try? JSONDecoder().decode(T.self, from: data) else {return}
-        
-        
-        
+        do {
+            return try JSONDecoder().decode(T.self, from: data)
+        }catch {
+            throw NetworkErros.decodingError
+        }
     }
     
-    
-    
-    
+   
     
 }
+
+

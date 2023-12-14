@@ -14,6 +14,10 @@
 		DBDB7D1D2B1F96E000B0CA42 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDB7D1C2B1F96E000B0CA42 /* LoadingView.swift */; };
 		DBDB7D212B1F970E00B0CA42 /* CLLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDB7D202B1F970E00B0CA42 /* CLLocationManager.swift */; };
 		DBDB7D232B1F971400B0CA42 /* ServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDB7D222B1F971400B0CA42 /* ServiceLayer.swift */; };
+		DBDB7D292B1FA2EA00B0CA42 /* CurrentWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDB7D282B1FA2EA00B0CA42 /* CurrentWeatherViewModel.swift */; };
+		DBDB7D2C2B1FA40600B0CA42 /* CurrentWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDB7D2B2B1FA40600B0CA42 /* CurrentWeatherModel.swift */; };
+		DBDB7D2E2B20151600B0CA42 /* EnvironmentVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDB7D2D2B20151600B0CA42 /* EnvironmentVariables.swift */; };
+		DBDB7D4A2B226EA600B0CA42 /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDB7D492B226EA600B0CA42 /* ForecastModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +29,11 @@
 		DBDB7D1C2B1F96E000B0CA42 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		DBDB7D202B1F970E00B0CA42 /* CLLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLLocationManager.swift; sourceTree = "<group>"; };
 		DBDB7D222B1F971400B0CA42 /* ServiceLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLayer.swift; sourceTree = "<group>"; };
+		DBDB7D242B1F984E00B0CA42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DBDB7D282B1FA2EA00B0CA42 /* CurrentWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherViewModel.swift; sourceTree = "<group>"; };
+		DBDB7D2B2B1FA40600B0CA42 /* CurrentWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherModel.swift; sourceTree = "<group>"; };
+		DBDB7D2D2B20151600B0CA42 /* EnvironmentVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentVariables.swift; sourceTree = "<group>"; };
+		DBDB7D492B226EA600B0CA42 /* ForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +66,11 @@
 		DBDB7D0B2B1F969200B0CA42 /* WeatherApp-Nagakumar */ = {
 			isa = PBXGroup;
 			children = (
+				DBDB7D242B1F984E00B0CA42 /* Info.plist */,
+				DBDB7D2D2B20151600B0CA42 /* EnvironmentVariables.swift */,
+				DBDB7D2A2B1FA3C100B0CA42 /* Models */,
 				DBDB7D1F2B1F96FB00B0CA42 /* Managers */,
+				DBDB7D272B1FA2C900B0CA42 /* ViewModels */,
 				DBDB7D1E2B1F96EC00B0CA42 /* Views */,
 				DBDB7D102B1F969300B0CA42 /* Assets.xcassets */,
 				DBDB7D122B1F969300B0CA42 /* Preview Content */,
@@ -90,6 +103,23 @@
 				DBDB7D202B1F970E00B0CA42 /* CLLocationManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		DBDB7D272B1FA2C900B0CA42 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DBDB7D282B1FA2EA00B0CA42 /* CurrentWeatherViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DBDB7D2A2B1FA3C100B0CA42 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DBDB7D2B2B1FA40600B0CA42 /* CurrentWeatherModel.swift */,
+				DBDB7D492B226EA600B0CA42 /* ForecastModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,9 +194,13 @@
 			files = (
 				DBDB7D232B1F971400B0CA42 /* ServiceLayer.swift in Sources */,
 				DBDB7D1B2B1F96D400B0CA42 /* ContentView.swift in Sources */,
+				DBDB7D2C2B1FA40600B0CA42 /* CurrentWeatherModel.swift in Sources */,
+				DBDB7D2E2B20151600B0CA42 /* EnvironmentVariables.swift in Sources */,
+				DBDB7D4A2B226EA600B0CA42 /* ForecastModel.swift in Sources */,
 				DBDB7D212B1F970E00B0CA42 /* CLLocationManager.swift in Sources */,
 				DBDB7D0D2B1F969200B0CA42 /* WeatherApp_NagakumarApp.swift in Sources */,
 				DBDB7D1D2B1F96E000B0CA42 /* LoadingView.swift in Sources */,
+				DBDB7D292B1FA2EA00B0CA42 /* CurrentWeatherViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,8 +329,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WeatherApp-Nagakumar/Preview Content\"";
+				DEVELOPMENT_TEAM = 53YVX9XW2S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WeatherApp-Nagakumar/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "\"This App wants to use your location to fetch weather\"";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "\"This App wants to use your location to fetch weather\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -323,8 +361,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WeatherApp-Nagakumar/Preview Content\"";
+				DEVELOPMENT_TEAM = 53YVX9XW2S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WeatherApp-Nagakumar/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "\"This App wants to use your location to fetch weather\"";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "\"This App wants to use your location to fetch weather\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

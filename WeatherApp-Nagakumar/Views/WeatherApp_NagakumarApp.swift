@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct WeatherApp_NagakumarApp: App {
+     let serviceImpl = ServiceLayerImpl()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(currentVMP: CurrentWeatherViewModel(service: serviceImpl))
         }
     }
 }
