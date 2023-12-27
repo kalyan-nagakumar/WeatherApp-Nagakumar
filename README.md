@@ -13,8 +13,8 @@ Weather App is a SwiftUI-based iOS application that provides current and future 
 
 ## Screenshots
 
-![Screenshot 1](/Screenshots/screenshot1.jpeg)
-![Screenshot 2](/Screenshots/screenshot2.png)
+![Screenshot 1](/screenshot1.png)
+![Screenshot 2](/screenshot2.jpeg)
 
 ## Installation
 
