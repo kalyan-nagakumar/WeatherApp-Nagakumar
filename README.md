@@ -13,7 +13,7 @@ Weather App is a SwiftUI-based iOS application that provides current and future 
 
 ## Screenshots
 
-![Screenshot 1](/Screenshots/screenshot1.png)
+![Screenshot 1](/Screenshots/screenshot1.jpeg)
 ![Screenshot 2](/Screenshots/screenshot2.png)
 
 ## Installation
@@ -51,6 +51,4 @@ The project uses the following technologies:
 
 - Created by [Kalyan Vajrala]
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
