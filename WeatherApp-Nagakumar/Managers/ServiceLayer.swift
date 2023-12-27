@@ -6,35 +6,43 @@
 //
 
 import Foundation
+
+// Protocol defining the service layer interface.
 protocol ServiceProtocl {
-    
-    func fetchData<T:Codable>(url:String,model:T.Type) async throws -> T
+    func fetchData<T: Codable>(url: String, model: T.Type) async throws -> T
 }
 
-final class ServiceLayerImpl : ServiceProtocl {
+// Implementation of the ServiceProtocol.
+final class ServiceLayerImpl: ServiceProtocl {
     
-    
-    func fetchData<T>(url: String, model: T.Type) async throws -> T where T : Decodable, T : Encodable {
+    // Function to fetch data from a given URL and decode it into the specified model type.
+    func fetchData<T>(url: String, model: T.Type) async throws -> T where T: Decodable, T: Encodable {
         
+        // Create a URL from the provided string.
         guard let unwrappedURL = URL(string: url) else {
-           throw NetworkErros.badUrl
+            throw NetworkErrors.badUrl
         }
         
-        let(data,response) =  try await URLSession.shared.data(from: unwrappedURL)
+        // Perform an asynchronous data request.
+        let (data, response) = try await URLSession.shared.data(from: unwrappedURL)
         
+        // Check if the HTTP response status code is 200 (OK).
         guard (response as? HTTPURLResponse)?.statusCode == 200 else {
-            throw NetworkErros.badResponse
+            throw NetworkErrors.badResponse
         }
         
         do {
+            // Decode the received data into the specified model type using JSONDecoder.
             return try JSONDecoder().decode(T.self, from: data)
-        }catch {
-            throw NetworkErros.decodingError
+        } catch {
+            throw NetworkErrors.decodingError
         }
     }
-    
-   
-    
 }
 
-
+// Enum defining network-related errors.
+enum NetworkErrors: Error {
+    case badUrl
+    case badResponse
+    case decodingError
+}
