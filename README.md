@@ -24,7 +24,7 @@ Weather App is a SwiftUI-based iOS application that provides current and future 
 1. Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/weather-app.git
+git clone https://github.com/kalyan-nagakumar/weather-app.git
 ```
 
 2. Open the Xcode project file:
