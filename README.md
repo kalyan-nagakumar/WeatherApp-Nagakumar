@@ -11,10 +11,11 @@ Weather App is a SwiftUI-based iOS application that provides current and future 
 
 - **Location-based:** Utilizes CoreLocation to fetch weather data based on the user's current location.
 
-## Screenshots
 
-![Screenshot 1](/screenshot1.png)
-![Screenshot 2](/screenshot2.jpeg)
+# Weather App Screenshots
+
+<img src="/screenshot1.png" alt="Screenshot 1" width="400"> <img src="/screenshot2.jpeg" alt="Screenshot 2" width="400">
+
 
 ## Installation
 
