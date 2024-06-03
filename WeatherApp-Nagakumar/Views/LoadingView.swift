@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+/// made changes in loading view
 struct LoadingView: View {
     
     var body: some View {
