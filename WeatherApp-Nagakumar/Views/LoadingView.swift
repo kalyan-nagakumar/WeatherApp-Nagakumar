@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// adding comment from main
 struct LoadingView: View {
     
     var body: some View {
