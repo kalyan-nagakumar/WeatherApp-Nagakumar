@@ -10,6 +10,7 @@ import SwiftUI
 import CoreLocation
 // adding a branch
 // ContentView is the main view of the app.
+// adding 2 commit
 struct ContentView: View {
     
     // State object for managing location updates.
